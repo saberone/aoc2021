@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c4c51241-d495-44b9-a876-12bce1a813c5": {
+      "ProjectGuid": "c4c51241-d495-44b9-a876-12bce1a813c5",
+      "DisplayName": "Puzzle1",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
