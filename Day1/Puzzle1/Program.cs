@@ -1,21 +1,18 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-
-int? previousValue = null;
+﻿int? previousValue = null;
 var increasedCount = 0;
 
-foreach (string line in File.ReadLines(@"input.txt"))
+foreach (var line in File.ReadLines(@"input.txt"))
 {
-    int currentValue = int.Parse(line.Trim());
-    Console.Write($"{currentValue}: ");
+    var currentValue = int.Parse(line.Trim());
+
+    Console.WriteLine(previousValue == null
+        ? $"{currentValue}: (N/A)"
+        : $"{currentValue}: ({(currentValue > previousValue ? "increased" : "decreased")})");
+
     if (currentValue > previousValue)
     {
-        Console.WriteLine($"increased");
         increasedCount++;
-    } else if (currentValue < previousValue)
-    {
-        Console.WriteLine($"decreased");
-    }
+    } 
     previousValue = currentValue;
 }
 Console.WriteLine($"Measurements larger than previous {increasedCount}");
